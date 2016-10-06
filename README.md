@@ -1,7 +1,15 @@
-# Step 3
+# Step 4
 
-It's convenient to see routes all done in one `server.js` file, but that can easily become unwieldy. There are many ways to do structure your your monolithic app as your codebase grows. The important takeaway is to modularize your code and separate routes in a way that makes sense.
+Before we move on to adding a database to our app, let's clean up our code a bit and introduce a few extra useful (but not required) goodies that I like to use.
 
-# Slightly Less Basic Routing 
+# Modules
 
-We move the code for the GET request we wrote in Step 2 and move it into a separate file. This cleans up our server file immensely and allows for separation of concerns.
+We add moment, cors, and morgan to our `server.js` file.
+
+# NPM Scripts
+
+You've seen this before, but they're useful and can save you literally dozens of keystrokes!!
+
+# Route Change
+
+We change `cohorts` to `messages` to begin building our application
