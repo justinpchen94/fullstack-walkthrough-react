@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //Routing
 
-//Here we create an endpoint with a relative url of /api/49
-app.get('/api/:cohort', (req,res) => {
-  console.log("Registered a GET at /api/:cohort")
+//Here we create an endpoint with a relative url of /api/cohort/49
+app.get('/api/cohort/:cohort', (req,res) => {
+  console.log("Registered a GET at /api/cohort/:cohort")
 
   //notice the :cohort in the url
   //this is called a param and this will be parsed into an object attached to the req called req.params
