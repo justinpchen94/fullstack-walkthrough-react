@@ -21,7 +21,7 @@ const path = require('path')
 app.set('port', (process.env.PORT || 3000));
 
 //this allows us to serve static files in an extremely convenient format
-app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 
 //finally, we call app.listen to bind our application to a port and listen for incoming requests on that port
 //for our own convenient, we use the optional callback to log our port starting up
