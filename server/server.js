@@ -13,25 +13,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 //Routing
-
-//Here we create an endpoint with a relative url of /api/49
-app.get('/api/:cohort', (req,res) => {
-  console.log("Registered a GET at /api/:cohort")
-
-  //notice the :cohort in the url
-  //this is called a param and this will be parsed into an object attached to the req called req.params
-  //this is one method of passing information along via GET requests, whose request objects do not allow a data property as seen with POST requests
-
-  let cohort = req.params.cohort
-  let retort = (cohort === 49) 
-               ? "MKS" + cohort + " is the worst" 
-               : "MKS" + cohort + " is the best"
-  res.send(retort)
-
-})
-
-
-
+const cohortRouter = require('./routes/cohort')
+app.use('/api/cohort', cohortRouter)
 
 
 

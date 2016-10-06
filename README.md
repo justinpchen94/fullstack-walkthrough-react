@@ -1,7 +1,7 @@
-# Step 2
+# Step 3
 
-We will now add custom routing into our application
+It's convenient to see routes all done in one `server.js` file, but that can easily become unwieldy. There are many ways to do structure your your monolithic app as your codebase grows. The important takeaway is to modularize your code and separate routes in a way that makes sense.
 
-# Basic Routing 
+# Slightly Less Basic Routing 
 
-We will show the basics of how routing is achieved with a simple example contained within the server.js file first, before moving on to more advanced techniques.
+We move the code for the GET request we wrote in Step 2 and move it into a separate file. This cleans up our server file immensely and allows for separation of concerns.
