@@ -1,17 +1,9 @@
-# Step 0 
+# Step 1
 
-We begin a new node project using `npm init`.
+Now we begin to start adding our own files.
 
-This creates a `package.json` file.
+We begin first by creating a `server` folder. As the name suggest, we will use this folder to store all things server related, including models, routes, templating engines, and other middleware.
 
-We run the following command to install the basic packages we need to get started:
+Within this `server` folder, we create a `server.js`. This will serve as the start point of our web app.
 
-`npm install --save express body-parser`
-
-TIP: if you are installing multiple packages at once, you can list them one after the other in the when you run `npm install`
-
-The above line is equivalent to:
-`npm install --save express`
-`npm install --save body-parser` 
-
-with the added benefit of not having to wait until each package finishes installing to install the next one.
+We will then include the bare minimum commands inside `server.js` to get a server up and running.
