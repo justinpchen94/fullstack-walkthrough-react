@@ -1,30 +1,40 @@
-//Statements are written in a different order than convention in order to group topics together 
-
-//Begin by requiring the express module and initialize a new express application using express();
 const express = require('express');
-const app = express();
-
-//bodyParser is used to populate the req.body attribute of incoming requests, among other things. It is extremely useful, but not necessary.
 const bodyParser = require('body-parser');
-//bodyParser.json() creates middleware that only parses json
-app.use(bodyParser.json());
-//bodyParser.urlencoded() creates middleware that only parses URL encoded streams (how most browsers send data)
-//the extended:true option allows for parsing of richer objects and arrays, making it seem more similar to JSON
-app.use(bodyParser.urlencoded({extended: true}));
 
-//note that path was _not_ installed via a separate call to npm install.
-//this is an included package with express
 const path = require('path')
 
-//app.set is used to set the value of an app setting, of whcih there are a variety
-//We will go into detail later about process.env, but for now just know that this is a process variable
+const app = express();
+
 app.set('port', (process.env.PORT || 3000));
 
-//this allows us to serve static files in an extremely convenient format
-app.use('/', express.static(path.join(__dirname, '../public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 
-//finally, we call app.listen to bind our application to a port and listen for incoming requests on that port
-//for our own convenient, we use the optional callback to log our port starting up
+
+//Routing
+
+//Here we create an endpoint with a relative url of /api/49
+app.get('/api/:cohort', (req,res) => {
+  console.log("Registered a GET at /api/:cohort")
+
+  //notice the :cohort in the url
+  //this is called a param and this will be parsed into an object attached to the req called req.params
+  //this is one method of passing information along via GET requests, whose request objects do not allow a data property as seen with POST requests
+
+  let cohort = req.params.cohort
+  let retort = (cohort === 49) 
+               ? "MKS" + cohort + " is the worst" 
+               : "MKS" + cohort + " is the best"
+  res.send(retort)
+
+})
+
+
+
+
+
+
 app.listen(app.get('port'), function() {
   console.log('Server started: http://localhost:' + app.get('port') + '/');
 });
