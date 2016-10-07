@@ -18,7 +18,7 @@ app.use(cors());
 
 
 //Routing
-const messageRouter = require('./routes/messages')
+const messageRouter = require('./controllers/messages')
 app.use('/api/messages', messageRouter)
 
 
