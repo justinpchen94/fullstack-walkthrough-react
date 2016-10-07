@@ -1,5 +1,5 @@
-# Step 6
+# Step 7
 
-We will now set up our message schema so that we can start recording messages in our app
+We are now ready to dive into adding React to our app!
 
-We also will set up our controller to query for all messages and also create new ones
+We will be using Webpack and Babel to transpile and bundle our extremely simple application for our front end
