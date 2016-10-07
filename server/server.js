@@ -29,7 +29,7 @@ app.use(cors());
 //Routing
 
 //we change the example 'cohort' route to 'messages' so that the name is consistent with what it represents within our app
-const messageRouter = require('./routes/messages')
+const messageRouter = require('./controllers/messages')
 app.use('/api/messages', messageRouter)
 
 
