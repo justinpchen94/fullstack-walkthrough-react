@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 //Routing
-const cohortRouter = require('./routes/cohort')
+const cohortRouter = require('./controllers/cohort')
 app.use('/api/cohort', cohortRouter)
 
 
