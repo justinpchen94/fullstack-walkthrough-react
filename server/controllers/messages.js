@@ -5,7 +5,7 @@ router.get('/', (req,res) => {
   res.send("We haven't implemented getting yet!")
 })
 
-router.post('h', (req,res) => {
+router.post('/', (req,res) => {
   res.send("We haven't implemented posting yet!")
 })
 
