@@ -3,6 +3,8 @@ A walkthrough of a building a basic full stack message board app using Node, Exp
 
 `git checkout step-0` to begin!
 
+`git checkout -f step-n` to navigate!
+
 # Table of Contents
 
 `step-0` - npm init, project setup
